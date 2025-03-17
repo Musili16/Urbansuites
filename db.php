@@ -1,8 +1,8 @@
 <?php
-$host = 'localhost';
+$host = 'urban-server.mysql.database.azure.com';
 $dbname = 'apartment_rentals';
-$username = 'root';
-$password = ''; 
+$username = 'rjaoqirfmz';
+$password = 'Nsxpas5k'; 
 
 try {
     // Establish database connection
