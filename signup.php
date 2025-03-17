@@ -1,6 +1,7 @@
 <?php
 session_start();
-$connection = new mysqli("localhost", "root", "", "apartment_rentals");
+$conn = new mysqli("urban-server.mysql.database.azure.com", "rjaoqirfmz", "Nsxpas5k", "apartment_rentals");
+
 
 if ($connection->connect_error) {
     die("Database connection failed: " . $connection->connect_error);
