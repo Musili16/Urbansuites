@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="adminstyles.css">
+</head>
+<body>
+
+    <!-- Restrict Access -->
+    <?php
+    session_start();
+    if (!isset($_SESSION["admin_logged_in"])) {
+        header("Location: admin_login.html");
+        exit;
+    }
+    ?>
+
+    <header>
+        <img src="uploads/Logo.png" class="logo" alt="Urban Suites Logo">
+        <h1>Admin Dashboard</h1>
+        <a href="room_management.html" class="btn">Room Management</a>
+        <a href="logout.php" class="btn logout">Logout</a>
+    </header>
+
+    <main>
+        <h2>Welcome, <?php echo $_SESSION["admin_username"]; ?>!</h2>
+
+        <h3>Room Availability</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Room Type</th>
+                    <th>Total Rooms</th>
+                    <th>Available Rooms</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="roomTableBody">
+                <!-- Data will be inserted dynamically here -->
+            </tbody>
+        </table>
+        
+        <script src="room_management.js"></script>

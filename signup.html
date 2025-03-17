@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Urban Suites</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+
+<div class="login-container">
+    <img src="uploads/logo1.png" alt="Urban Suites Logo" class="login-logo">
+    <h2>Sign Up for Urban Suites</h2>
+
+    <button class="google-btn">
+        <img src="icons/google.png" alt="Google Logo">
+        Sign up with Google
+    </button>
+
+    <p class="separator"><span>or sign up with email</span></p>
+
+    <form id="signup-form" action="signup.php" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" name="name" placeholder="Enter your full name" required>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Enter your email" required>
+        
+        <label for="phone">Phone Number</label>
+        <input type="text" name="phone" placeholder="Enter your Phone Number" required>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="Create a password" required>
+
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" name="confirm_password" placeholder="Confirm your password" required>
+
+        <button type="submit" class="auth-btn">Sign Up</button>
+    </form>
+
+    <p class="below-text">Already have an account? <a href="login.html">Sign in</a></p>
+</div>
+
+</body>
+</html>

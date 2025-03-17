@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login </title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Logo -->
+<img src="uploads/logo1.png" alt="Urban Suites Logo" class="login-logo">
+
+        <h2>Sign in to Urban Suites</h2>
+
+        <!-- Google Sign-In Button -->
+        <button class="google-btn">
+            <img src="icons/google.png" alt="Google Logo"> Sign in with Google
+        </button>
+
+        <!-- Separator -->
+        <div class="separator">
+            <span>or sign in with email</span>
+        </div>
+
+        <!-- Login Form -->
+        <form id="login-form" action="login.php" method="POST">
+            <label for="email">Username/Email</label>
+            <input type="text" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password">Password <a href="forgot-password.html" class="forgot-link">Forgot?</a></label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <button type="submit" class="auth-btn">Sign In</button>
+        </form>
+
+        <!-- Sign-Up Link -->
+        <p class="below-text">Don't have an account? <a href="signup.html">Sign up</a></p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the URL parameters
+            const params = new URLSearchParams(window.location.search);
+            const message = params.get("message");
+        
+            if (message) {
+                // Create a pop-up div
+                let popup = document.createElement("div");
+                popup.classList.add("popup");
+                popup.innerText = message;
+                
+                // Append the pop-up to the body
+                document.body.appendChild(popup);
+        
+                // Show the pop-up
+                popup.classList.add("show");
+        
+                // Hide the pop-up after 3 seconds
+                setTimeout(function() {
+                    popup.classList.remove("show");
+                    popup.remove(); // Remove the element after hiding
+                }, 3000);
+            }
+        });
+        </script>
+
+</body>
+</html>

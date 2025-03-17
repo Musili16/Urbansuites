@@ -1,0 +1,216 @@
+/* General Page Styling */
+body {
+    background-color: #ffffff; /* Solid white background */
+    color: #333; /* Dark gray text for readability */
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+header {
+    background-color: #4CAF50; /* Dark background */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px; /* Rounds the corners */
+    margin: 10px; /* Adds space around the header */
+}
+
+header h1 {
+    color: #ffffff; /* Keep title white */
+}
+
+h3 {
+    color: #2f5d3a;
+    font-size: 35px;
+    text-align: center; 
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* White text for contrast */
+    font-weight: bold;
+    padding: 8px 12px;
+    background-color: #388E3C; /* Slightly darker green for buttons */
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: #2E7D32; /* Darker green on hover */
+}
+
+/* Logo Styling */
+.logo-link {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo {
+    width: 160px; /* Slightly increased size */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Room Listing */
+.room-listing {
+    text-align: center;
+    padding: 20px;
+}
+
+.room-container {
+    width: 60%;
+    justify-content: left;
+    margin: 0 auto;
+    background-color: #8c978d7f;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Image Container */
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.large-image {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    border: 2px solid #709272;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.small-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.small-image {
+    width: 290px;
+    height: 200px;
+    border: 2px solid #709272;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Room Info */
+.room-info {
+    margin-top: 20px;
+    text-align: left;
+    padding: 10px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #4CAF50; /* Soft natural green */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-section h3 {
+    text-align: left; /* Ensures headings align to the left */
+    margin-left: 0; /* Resets any unintended left margin */
+    font-size: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Ensures proper spacing */
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+.footer-section {
+    flex: 1;
+    min-width: 350px;
+    margin: 10px;
+    text-align: left;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social a {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    color: white;
+    text-decoration: none;
+}
+
+.social img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* Buttons */
+button {
+    background-color: #388E3C; /* Green button */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #2E7D32; /* Darker green */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social a {
+        justify-content: center;
+    }
+}
+

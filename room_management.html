@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Management</title>
+    <link rel="stylesheet" href="adminstyles.css">
+</head>
+<body>
+
+    <!-- Restrict Access -->
+    <?php
+    session_start();
+    if (!isset($_SESSION["admin_logged_in"])) {
+        header("Location: admin_login.html");
+        exit;
+    }
+    ?>
+
+    <header>
+        <img src="uploads/Logo.png" class="logo" alt="Urban Suites Logo">
+        <h1>Room Management</h1>
+        <a href="admin_dashboard.html" class="btn">Dashboard</a>
+        <a href="logout.php" class="btn logout">Logout</a>
+    </header>
+
+    <main>
+        <h2>Manage Rooms</h2>
+
+        <table id="roomTable">
+            <thead>
+                <tr>
+                    <th>Room ID</th>
+                    <th>Type</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be inserted here by JS -->
+            </tbody>
+        </table>
+
+        <h3>Add New Room</h3>
+        <form id="addRoomForm">
+            <label>Room Type:</label>
+            <select name="type">
+                <option value="Single Room">Single Room</option>
+                <option value="Bedsitter">Bedsitter</option>
+                <option value="One Bedroom">One Bedroom</option>
+                <option value="Two Bedroom">Two Bedroom</option>
+            </select>
+
+            <label>Price:</label>
+            <input type="number" name="price" required>
+
+            <button type="submit">Add Room</button>
+        </form>
+    </main>
+
+    <script src="room_management.js"></script>
+
+</body>
+</html>

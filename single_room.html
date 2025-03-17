@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Suites: Room Listings</title>
+    <link rel="stylesheet" href="listings.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="uploads/logo.png" alt="Urban Suites Logo" class="logo">
+        </a>
+        <h1>Urban Suites</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Room Listing Section -->
+    <section class="room-listing">
+        <div class="room-container">
+            <!-- Image Section -->
+            <div class="image-container">
+                <h3>Single Room</h3>
+                <img src="uploads/single (2).jpg" alt="Room Image" class="large-image" onclick="openFullSize(this)">
+                <div class="small-images">
+                    <img src="uploads/single (3).jpg" alt="Room Image" class="small-image" onclick="openFullSize(this)">
+                    <img src="uploads/single (1).jpg" alt="Room Image" class="small-image" onclick="openFullSize(this)">
+                </div>
+            </div>
+
+            <!-- Description Section -->
+            <div class="room-info">
+                <p>A spacious yet affordable single room for someone looking to start off in life.</p>
+                <p><strong>Price:</strong> Ksh 3,500.00</p>
+                <p><strong>Location:</strong> Nairobi</p>
+                <p><strong>Status:</strong> Available</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Urban Suites</h3>
+                <ul>
+                    <li><a href="about.html">About Us & Contacts</a></li>
+                    <li><a href="#">Our Profile</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Info</h3>
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <a href="https://facebook.com/jeffito.munene"><img src="icons/facebook.png" alt="Facebook"> Facebook</a>
+                <a href="https://wa.me/254106957191"><img src="icons/whatsapp.png" alt="WhatsApp"> WhatsApp</a>
+                <a href="https://instagram.com/benu_jeff"><img src="icons/instagram.png" alt="Instagram"> Instagram</a>
+                <a href="https://x.com/benu_jeff"><img src="icons/twitter.png" alt="X"> Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openFullSize(image) {
+            window.open(image.src, "_blank");
+        }
+    </script>
+</body>
+</html>
