@@ -1,6 +1,6 @@
 <?php
 header("Content-Type: application/json");
-$conn = new mysqli("localhost", "root", "", "apartment_rentals");
+$conn = new mysqli("urban-server.mysql.database.azure.com", "rjaoqirfmz", "Nsxpas5k", "apartment_rentals");
 
 if ($conn->connect_error) {
     die(json_encode(["error" => "Database connection failed"]));
